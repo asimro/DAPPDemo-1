@@ -4,7 +4,20 @@ import { LoadBlockChain } from "./web3call";
 
 
 const initialState = {
-    totalSupply: ""
+    Web3: " ",
+    Accounts: [],
+    Contract: " ",
+    TotalSupply: " ",
+    BalanceOf: " ",
+    LastTokenID: " ",
+    Name: " ",
+    Symbol: " ",
+    Paused: " ",
+    ContractBalance: " ",
+    MaxSupply: " ",
+    NFTPrice: " ",
+    TokenURI: " ",
+    buyNFTsTrax: []
 }
 
 

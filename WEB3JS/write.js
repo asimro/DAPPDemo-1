@@ -25,8 +25,8 @@ const contractWrite = async () => {
         const txObject = {
             nonce: web3.utils.toHex(txCount),
             to: contractAddress,
-            value: web3.utils.toHex(web3.utils.toWei("1.0", 'ether')),
-            data: contract.methods.buyNFTs(account1, "10").encodeABI(),
+            value: web3.utils.toHex(web3.utils.toWei("0.1", 'ether')),
+            data: contract.methods.buyNFTs(account1, "1").encodeABI(),
             gasLimit: web3.utils.toHex(60000000),
             gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei'))
         }
@@ -41,6 +41,10 @@ const contractWrite = async () => {
         // sending transaction on blockchain
         const singedTransaction = await web3.eth.sendSignedTransaction(raw);
         console.log("singedTransaction", singedTransaction);
+
+        const blockdata = await web3.eth.getBlock("latest");
+        console.log('blockdata', blockdata);
+        console.log('timestamp . operator', blockdata.timestamp);
 
 
 

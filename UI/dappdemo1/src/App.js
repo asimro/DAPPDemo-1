@@ -1,18 +1,23 @@
 import './App.css';
 import React from 'react';
-import { LoadBlockChain } from './context/web3call';
 import { ContextProvider } from './context/contextAPI';
 import { Balance } from './components/Balance';
+import { Header } from './components/Header';
+import { AddBuyNFTsTrax } from './components/AddTrax';
+import { TokenBalance } from './components/TokenHistory';
 
 function App() {
 
     return (
         <ContextProvider>
-           
-                <h1>  Helow world </h1>
-                <Balance/>
+            <div >
+                <Header />
+                <Balance />
+                <TokenBalance />
+                <AddBuyNFTsTrax />
 
-            
+            </div>
+
         </ContextProvider>
     );
 };
